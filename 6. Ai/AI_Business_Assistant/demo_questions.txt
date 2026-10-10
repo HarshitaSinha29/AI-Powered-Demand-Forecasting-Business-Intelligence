@@ -1,0 +1,19 @@
+AI BUSINESS ASSISTANT — DEMO QUESTIONS
+
+1. Which store type has the highest Sales per Customer?
+Expected: Store Type D — ₹11.25
+
+2. What was the impact of promotions?
+Expected: Sales per Customer was ₹9.74 during promotional store-days versus ₹8.51 during non-promotional store-days.
+
+3. How accurate was the forecasting model?
+Expected: MAE ≈ ₹451.00, RMSE ≈ ₹688.30, R² ≈ 0.9672.
+
+4. Which competition distance band performed best?
+Expected: 0–1 km, with average sales per store-day of ₹6,050.13.
+
+5. What was the year-over-year sales trend?
+Expected: 2014 sales were approximately 5.30% lower than 2013.
+
+6. Which store had the highest total sales?
+Expected: Store 262, with total sales of ₹19,516,842.

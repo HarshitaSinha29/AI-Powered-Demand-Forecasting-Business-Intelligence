@@ -1,0 +1,174 @@
+AI DEMAND FORECASTING & BUSINESS INTELLIGENCE
+BUSINESS KNOWLEDGE
+
+PROJECT OVERVIEW
+This project analyzes Rossmann Store Sales data and builds a machine learning model for demand forecasting. The analysis covers store performance, promotions, seasonality, competition distance, and forecasting performance.
+
+DATASET
+- Training records: 1,017,209
+- Number of stores: 1,115
+- Date range: 2013-01-01 to 2015-07-31
+- Overall average sales per record: ₹5,773.82
+
+STORE TYPE PERFORMANCE
+- Store Type A:
+  Total Sales: ₹3,165,334,859
+  Store Count: 602
+  Sales per Customer: ₹8.71
+
+- Store Type B:
+  Total Sales: ₹159,231,395
+  Store Count: 17
+  Sales per Customer: ₹5.06
+
+- Store Type C:
+  Total Sales: ₹783,221,426
+  Store Count: 148
+  Sales per Customer: ₹8.50
+
+- Store Type D:
+  Total Sales: ₹1,765,392,943
+  Store Count: 348
+  Sales per Customer: ₹11.25
+
+PROMOTION IMPACT
+- Promotion = 0:
+  Total Sales: ₹2,771,974,337
+  Sales per Customer: ₹8.51
+
+- Promotion = 1:
+  Total Sales: ₹3,101,206,286
+  Sales per Customer: ₹9.74
+
+- Difference in Sales per Customer: ₹1.23
+
+Important:
+This is a descriptive association. It does not prove that promotions caused the increase in sales.
+
+SEASONAL SALES PATTERN
+Highest observed monthly average sales per store-day:
+- December 2014: ₹6,973.28
+
+Lowest observed monthly average sales per store-day:
+- January 2013: ₹5,211.56
+
+Important:
+The dataset contains only January-July 2015, so 2015 should not be treated as a complete year.
+
+YEAR-OVER-YEAR SALES
+- 2013 total sales: approximately ₹2.3029 billion
+- 2014 total sales: approximately ₹2.1808 billion
+- 2014 compared with 2013: approximately 5.30% lower
+
+Important:
+The YoY comparison uses complete calendar years. 2015 is excluded because it is incomplete.
+
+COMPETITION DISTANCE
+Stores were grouped into five competition-distance bands.
+
+- 0-1 km:
+  Stores: 333
+  Average sales per store-day: ₹6,050.13
+
+- 1-2 km:
+  Stores: 172
+  Average sales per store-day: ₹5,897.76
+
+- 2-5 km:
+  Stores: 261
+  Average sales per store-day: ₹5,529.88
+
+- 5-10 km:
+  Stores: 162
+  Average sales per store-day: ₹5,567.72
+
+- 10+ km:
+  Stores: 187
+  Average sales per store-day: ₹5,685.55
+
+Important:
+This shows an observed association between competition distance and sales performance. It does not prove that competition distance directly causes differences in sales.
+
+DAY-OF-WEEK PATTERN
+Among open store-days:
+- Monday had the highest total sales.
+- Saturday had lower total sales.
+- Sunday had the highest average sales per store-day, but Sunday had far fewer open store-day observations.
+
+Important:
+Total sales and average sales per store-day should be considered together because the number of observations differs across days.
+
+TOP STORES BY TOTAL SALES
+Top 10 stores identified by total sales:
+- Store 262: ₹19,516,842
+- Store 817: ₹17,057,867
+- Store 562: ₹16,927,322
+- Store 1114: ₹16,202,585
+- Store 251: ₹14,896,870
+- Store 788: ₹14,082,141
+- Store 733: ₹14,067,158
+- Store 513: ₹14,252,406
+- Store 383: ₹13,489,879
+- Store 756: ₹12,911,782
+
+Important:
+High total sales do not necessarily mean the highest Sales per Customer.
+
+FORECASTING MODEL
+Model:
+- Random Forest Regressor
+
+Model parameters:
+- max_depth = 15
+- n_estimators = 20
+- random_state = 42
+- n_jobs = -1
+
+Chronological train-test split:
+- Training data: before 2015-06-01
+- Test data: 2015-06-01 onward
+
+MODEL PERFORMANCE
+- MAE: approximately ₹451.00
+- RMSE: approximately ₹688.30
+- R²: approximately 0.9672
+
+Interpretation:
+The model achieved a high R² on the held-out test period and produced an average absolute error of approximately ₹451.
+
+FORECAST ACCURACY DASHBOARD METRIC
+The Power BI dashboard uses a business-defined metric:
+
+Forecast Accuracy % =
+1 - (Sum of Absolute Error / Sum of Actual Sales)
+
+Dashboard result:
+- Forecast Accuracy: 92.69%
+
+Important:
+This is a business-defined forecasting metric. It is not classification accuracy.
+
+BUSINESS USE
+Demand forecasting can support:
+- Inventory planning
+- Staffing decisions
+- Promotional planning
+- Store-level performance monitoring
+
+OVERALL BUSINESS RECOMMENDATION
+Sales performance varies by store, promotion status, day of the week, season, and competition-distance band.
+
+These descriptive insights can be combined with store-level demand forecasts to support business decisions.
+
+Forecast results should be monitored and updated as new sales data becomes available.
+
+AI ASSISTANT RULES
+1. Answer questions using only the information contained in this knowledge file.
+2. Do not invent numbers, stores, dates, metrics, or conclusions.
+3. If the information needed to answer a question is not available, say:
+   "I don't have enough information in the project knowledge base to answer that."
+4. Clearly distinguish descriptive association from causation.
+5. Do not claim that promotions caused higher sales.
+6. Do not treat 2015 as a complete year.
+7. When discussing forecasting performance, distinguish MAE, RMSE, R², and the Power BI Forecast Accuracy metric.
+8. Use simple business language.

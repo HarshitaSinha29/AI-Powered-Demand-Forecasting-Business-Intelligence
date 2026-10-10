@@ -1,0 +1,2 @@
+ALTER TABLE dbo.train
+ALTER COLUMN StateHoliday NVARCHAR(10);
